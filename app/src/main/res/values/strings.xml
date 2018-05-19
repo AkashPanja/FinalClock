@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FinalClock</string>
+    <string name="ShadowRadius">8</string>
+    <string name="ShadowRadiusTwo">10</string>
+    <string name="ShadowX">3</string>
+    <string name="ShadowY">0</string>
+
+    <string name="shadowX">3</string>
+    <string name="shadowY">5</string>
+</resources>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keepScreenOn="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="io.github.akashpanja.finalclock.Activity.View.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/time"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:keepScreenOn="true"
+            android:shadowDx="@string/ShadowX"
+            android:shadowDy="@string/ShadowY"
+            android:shadowRadius="@string/ShadowRadius"
+            android:shadowColor="@color/TimeShadow"
+            android:paddingBottom="0dp"
+            android:paddingTop="@dimen/TimePaddingTop"
+            android:textAlignment="center"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/Clock"
+            android:textSize="@dimen/ClockTime"
+            android:text="12"
+            android:id="@+id/Hour"
+            android:layout_width="@dimen/TimeWidth"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:shadowDx="@string/ShadowX"
+            android:shadowDy="@string/ShadowY"
+            android:shadowRadius="@string/ShadowRadius"
+            android:shadowColor="@color/TimeShadow"
+            android:paddingBottom="0dp"
+            android:paddingTop="@dimen/TimePaddingTop"
+            android:textAlignment="center"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/Clock"
+            android:textSize="@dimen/ClockTime"
+            android:text=":"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:shadowDx="@string/ShadowX"
+            android:shadowDy="@string/ShadowY"
+            android:shadowRadius="@string/ShadowRadius"
+            android:shadowColor="@color/TimeShadow"
+            android:paddingBottom="0dp"
+            android:paddingTop="@dimen/TimePaddingTop"
+            android:textAlignment="center"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/Clock"
+            android:textSize="@dimen/ClockTime"
+            android:text="00"
+            android:id="@+id/Minutes"
+            android:layout_width="@dimen/TimeWidth"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_below="@id/time"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:shadowDx="@string/shadowX"
+            android:shadowDy="@string/shadowY"
+            android:shadowRadius="@string/ShadowRadiusTwo"
+            android:shadowColor="@color/DayShadow"
+            android:textSize="@dimen/Day"
+            android:textColor="@color/Day"
+            android:textAlignment="center"
+            android:text="Friday"
+            android:id="@+id/DayOfWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:shadowDx="@string/shadowX"
+            android:shadowDy="@string/shadowY"
+            android:shadowRadius="@string/ShadowRadiusTwo"
+            android:shadowColor="@color/DayShadow"
+            android:textSize="@dimen/Day"
+            android:textColor="@color/Day"
+            android:textAlignment="center"
+            android:text=", "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:shadowDx="@string/shadowX"
+            android:shadowDy="@string/shadowY"
+            android:shadowRadius="@string/ShadowRadiusTwo"
+            android:shadowColor="@color/DayShadow"
+            android:textSize="@dimen/Day"
+            android:textColor="@color/Day"
+            android:textAlignment="center"
+            android:id="@+id/Month"
+            android:text="Jan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:shadowDx="@string/shadowX"
+            android:shadowDy="@string/shadowY"
+            android:shadowRadius="@string/ShadowRadiusTwo"
+            android:shadowColor="@color/DayShadow"
+            android:textSize="@dimen/Day"
+            android:textColor="@color/Day"
+            android:textAlignment="center"
+            android:text=" "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:shadowDx="@string/shadowX"
+            android:shadowDy="@string/shadowY"
+            android:shadowRadius="@string/ShadowRadiusTwo"
+            android:shadowColor="@color/DayShadow"
+            android:textSize="@dimen/Day"
+            android:textColor="@color/Day"
+            android:textAlignment="center"
+            android:id="@+id/DateOfMonth"
+            android:text="12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:shadowDx="@string/shadowX"
+            android:shadowDy="@string/shadowY"
+            android:shadowRadius="@string/ShadowRadiusTwo"
+            android:shadowColor="@color/DayShadow"
+            android:textSize="@dimen/Day"
+            android:textColor="@color/Day"
+            android:textAlignment="center"
+            android:text=" | "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:shadowDx="@string/shadowX"
+            android:shadowDy="@string/shadowY"
+            android:shadowRadius="@string/ShadowRadiusTwo"
+            android:shadowColor="@color/DayShadow"
+            android:id="@+id/WishOfTheDay"
+            android:textSize="@dimen/Day"
+            android:textColor="@color/Day"
+            android:textAlignment="center"
+            android:text="Good Moorning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ImageView
+        android:src="@drawable/pikachu"
+        android:id="@+id/logo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="180dp"
+        android:layout_height="180dp"/>
+
+
+
+</RelativeLayout>

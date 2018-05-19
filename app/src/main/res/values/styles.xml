@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="LaunchScreen" parent="AppTheme">
+        <item name="android:fontFamily">@font/product_sans</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@color/colorLaunchScreenBackground</item>
+        <item name="colorPrimary">@color/colorLaunchScreenPrimary</item>
+        <item name="colorPrimaryDark">@color/colorLaunchScreenPrimaryDark</item>
+        <item name="colorAccent">@color/colorLaunchScreenAccent</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>

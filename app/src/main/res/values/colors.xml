@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--    Launch Screen   -->
+    <color name="colorLaunchScreenPrimary">#f5f5f5</color>
+    <color name="colorLaunchScreenPrimaryDark">#33C3B0</color>
+    <color name="colorLaunchScreenAccent">#f5f5f5</color>
+
+    <color name="colorLaunchScreenNav">#33C3B0</color>
+    <color name="colorLaunchScreenBackground">#33C3B0</color>
+
+    <color name="Clock">#ffffff</color>
+    <color name="Day">#ffffff</color>
+    <color name="TimeShadow">#f5797979</color>
+    <color name="DayShadow">#f5797979</color>
+</resources>
