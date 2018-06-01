@@ -30,6 +30,7 @@
             android:layout_width="@dimen/TimeWidth"
             android:layout_height="wrap_content" />
         <TextView
+            android:id="@+id/Colon"
             android:shadowDx="@string/ShadowX"
             android:shadowDy="@string/ShadowY"
             android:shadowRadius="@string/ShadowRadius"
@@ -125,6 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
+            android:id="@+id/Pipe"
             android:shadowDx="@string/shadowX"
             android:shadowDy="@string/shadowY"
             android:shadowRadius="@string/ShadowRadiusTwo"

@@ -14,6 +14,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 
 import io.github.akashpanja.finalclock.Model.Live.Clock;
@@ -21,10 +24,14 @@ import io.github.akashpanja.finalclock.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView HourView, MinutesView, DayOfWeekView, MonthView, DateOfMonthView, WishOfTheDayView;
+    TextView HourView, MinutesView, DayOfWeekView, MonthView, DateOfMonthView, WishOfTheDayView,Colon,Pipe;
     ImageView logo;
     TextToSpeech textToSpeech;
     MediaPlayer mediaPlayer = new MediaPlayer();
+    Clock clock;
+    List<Integer> Tune=Arrays.asList(R.raw.one,R.raw.five,R.raw.eight,R.raw.four,R.raw.five,R.raw.five,R.raw.nine,R.raw.eight,R.raw.nine,R.raw.five,R.raw.eleven,R.raw.twelve);
+
+    static boolean init=false;
 
     private Observer<String> Hour = new Observer<String>() {
         @Override
@@ -32,15 +39,15 @@ public class MainActivity extends AppCompatActivity {
 
             textToSpeech.speak("Right Now It's " + s + " O Clock", TextToSpeech.QUEUE_ADD, null);
 
-
-            if (!mediaPlayer.isPlaying()) {
-                mediaPlayer.release();
+            if(init)
+            {
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), Tune.get(Integer.parseInt(s)-1));
+                mediaPlayer.start();
             }
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.hourtune);
-            mediaPlayer.start();
-
             HourView.setText(s);
+
+            init=true;
         }
     };
 
@@ -88,8 +95,6 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    Clock clock;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -117,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
         DateOfMonthView = (TextView) findViewById(R.id.DateOfMonth);
         MonthView = (TextView) findViewById(R.id.Month);
         WishOfTheDayView = (TextView) findViewById(R.id.WishOfTheDay);
+        Pipe = (TextView) findViewById(R.id.Pipe);
+        Colon = (TextView) findViewById(R.id.Colon);
         logo = (ImageView) findViewById(R.id.logo);
 
         logo.post(new Runnable() {
@@ -140,6 +147,8 @@ public class MainActivity extends AppCompatActivity {
         DayOfWeekView.setTypeface(typeface);
         MonthView.setTypeface(typeface);
         WishOfTheDayView.setTypeface(typeface);
+        Pipe.setTypeface(typeface);
+        Colon.setTypeface(typeface);
 
         /* Setting Observer */
 
